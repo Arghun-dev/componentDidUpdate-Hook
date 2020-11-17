@@ -7,10 +7,8 @@ in the below example I want make the `edit button` enable when user changes `cus
 ```js
 import React, { useLayoutEffect } from 'react'
 
-
-
 const firstUpdate = useRef(true);
-
+const [btnDisable, setBtnDisable] = useState(true)
 
 useLayoutEffect(() => {
         if (firstUpdate.current) {
@@ -19,5 +17,5 @@ useLayoutEffect(() => {
         }
 
         setBtnDisable(false)
-    }, [customerId]);
+}, [customerId]);
     ```
